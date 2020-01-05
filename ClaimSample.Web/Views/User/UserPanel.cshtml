@@ -1,0 +1,32 @@
+﻿@using ClaimSample.Core.Security  
+@{
+    ViewData["Title"] = "پنل کاربری";
+}
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <div class="login100-pic js-tilt" data-tilt>
+                <h1 class="login100-form-title hedaertext">
+                    پنل کاربری
+                </h1>
+            </div>
+
+            <form class="login100-form validate-form">
+                <h1 class="login100-form-title hedaertext">
+                      خوش امدید
+                </h1>
+                <div class="hedaertext">
+                    کاربری :  <input type="text" value=" @User.Identity.Name">
+                </div>
+                <div class="hedaertext">
+                    ایمیل :  <input type="text" value="@User.Identity.GetEmail()">
+                </div>
+                <div class="hedaertext">
+                    آخرین ورود : <input type="text" value=" @User.Identity.GetLastLogin()">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
